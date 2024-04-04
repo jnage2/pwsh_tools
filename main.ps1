@@ -30,3 +30,15 @@ Add-Type -AssemblyName System.Windows.Forms
 
 
 Update-ScriptFromGitHub -RepositoryUrl 'https://github.com/jnage2/pwsh_tools' -LocalScriptPath 'main.ps1' -LocalHashPath "$PSScriptRoot\hash" -DeployKeyPath "$PSScriptRoot\deploy_key" -Force
+
+$dictionary = New-Object -TypeName "System.Collections.Generic.Dictionary[string, string]"
+$dictionary.Add("Key1", "Value1")
+$dictionary.Add("Key2", "Value2")
+
+Write-Host "Dictionary keys: $($dictionary.Keys -join ', ')"
+Write-Host "Dictionary values: $($dictionary.Values -join ', ')"
+Write-Host "Dictionary count: $($dictionary.Count)"
+Write-Host "Dictionary contains key 'Key1': $($dictionary.ContainsKey('Key1'))"
+Write-Host "Dictionary contains value 'Value1': $($dictionary.ContainsValue('Value1'))"
+Write-Host "Dictionary item with key 'Key1': $($dictionary['Key1'])"
+Write-Host "Dictionary item with key 'Key2': $($dictionary['Key2'])"
