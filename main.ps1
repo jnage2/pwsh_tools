@@ -42,3 +42,5 @@ Write-Host "Dictionary contains key 'Key1': $($dictionary.ContainsKey('Key1'))"
 Write-Host "Dictionary contains value 'Value1': $($dictionary.ContainsValue('Value1'))"
 Write-Host "Dictionary item with key 'Key1': $($dictionary['Key1'])"
 Write-Host "Dictionary item with key 'Key2': $($dictionary['Key2'])"
+
+$dictionary.Remove('Key1')
